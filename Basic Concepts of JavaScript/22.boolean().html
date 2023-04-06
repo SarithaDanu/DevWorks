@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hint="";
+        var pattern=/ /;
+        function CountryChange(){
+            var country=document.getElementById("Country").value;
+            var flag=document.getElementById("flag");
+            var mobile=document.getElementById("Mobile");
+            var submitbtn=document.getElementById("Submitbtn");
+            if(country=="India"){
+                flag.src="../images/india.jpg";
+                pattern=/\+91\d{10}/;
+                mobile.placeholder="eg. +91 10 digits";
+                hint="eg. +91 10 digits";
+                submitbtn.disabled=false;
+            }
+            else if(country=="US"){
+                flag.src="../images/us.jpg";
+                pattern=/\+\(1\)\([0-9]{3}\)\s [0-9]{3}-[0-9]{4}/;
+                mobile.placeholder="eg: +(1)(425) 555-0100";
+                hint="eg: +(1)(425) 555-0100";
+                submitbtn.disabled=false;
+            }else if(country=="UK"){
+                flag.src="../images/uk.jpg";
+                pattern=/\+\(44\)\([0-9]{2}\)\s[0-9]{4}\s[0-9]{4}/;
+                mobile.placeholder="eg: +(44)(20) 1234 5678";
+                hint="eg: +(44)(20) 1234 5678";
+                submitbtn.disabled=false;
+            }else{
+                flag.src="";
+                flag.alt="select country";
+                mobile.placeholder="please select a country";
+                submitbtn.disabled=true;
+            }
+        }
+        function SubmitClick(){
+            var mobile=document.getElementById("Mobile").value;
+            var msg=document.getElementById("msg");
+            if(mobile.match(pattern)){
+                document.write(`Verified Successfully..OTP sent to ${mobile}`);
+
+            }else{
+                msg.innerHTML=`Invalid Number: ${hint}`.fontcolor('red');
+            }
+        }
+    </script>
+    <style>
+        #flag{
+            /*ABSOLUTE: it makes the element attached to the relative content */
+            position: absolute; 
+            top: 50px;
+            right: 200px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Mobile</legend>
+        <dl>
+            <dt>Select Your Country <img id="flag" width="60" height="50"></dt>
+            <dd>
+                <select id="Country" onclick="CountryChange()">
+                    <option>Select Country</option>
+                    <option>India</option>
+                    <option>US</option>
+                    <option>UK</option>
+                </select>
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" id="Mobile">
+            </dd>
+        </dl>
+        <button onclick="SubmitClick()" id="Submitbtn">Submit</button>
+    </fieldset>
+    <h1 align="center" id="msg"></h1>
+</body>
+</html>

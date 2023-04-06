@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{ 
+            padding: 5px;
+            width: fit-content;
+            border: 1px solid red;
+            background-color: red;
+            color: white;
+            
+        }
+        @media  screen and (min-width:600px) {
+            ul{ 
+                display: flex;
+                justify-content: space-between;
+            }
+
+        }
+        @media screen and (max-width:599px) {
+             ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height:200px;
+             }
+             li span{
+                display: none;
+                width: fit-content;
+             }
+             li{
+                border-radius: 20px;
+                transform: rotate(0deg);
+                transition: 2s;
+             }
+             li:hover span{
+                display: inline;
+             
+             }
+             li:hover{
+                width: 100px;
+                transition: 3s;
+                transform: rotate(360deg);
+                transition: 2s;
+             }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="bi bi-house"> <span>Home</span></li>
+        <li class="bi bi-person"> <span>About</span></li>
+        <li class="bi bi-envelope"> <span>Contact</span></li>
+        <li class="bi bi-bell"> <span>Notify</span></li>
+    </ul>
+</body>
+</html>

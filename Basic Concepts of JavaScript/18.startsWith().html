@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function Verifyname(){
+            var username=document.getElementById("username").value;
+            var error=document.getElementById("Nameerror");
+            if(username.charCodeAt(0)<=65 || username.charCodeAt(0)>=90){
+                error.innerHTML="name must start with uppercase letter*".fontcolor('red');
+
+            }else{
+                error.innerHTML="";
+            }
+        }
+        function Verifyemail(){
+            var email=document.getElementById("Email").value;
+            var error=document.getElementById("Emailerror");
+            var dotpos=email.lastIndexOf(".");
+            var atpos=email.indexOf("@");
+            if(atpos<=2 && (dotpos-atpos)<2){
+                error.innerHTML="Invalid Email id*".fontcolor('red');
+            }else{
+                error.innerHTML="";
+            }
+
+            if(email.endsWith("gmail.com")){
+                error.innerHTML="";
+            }else{
+                error.innerHTML="Only gmail.com is allowed".fontcolor('red');
+            }
+        }
+            function Verifycard(){
+                var card=document.getElementById("Cardnumber").value;
+                var Cardpic=document.getElementById("pic");
+                if(card.startsWith("4455")){
+                    Cardpic.src="../images/visa.jpg";
+                }else if(card.startsWith("5570")){
+                    Cardpic.src="../images/mastercard.jpg";
+                }else{
+                    Cardpic.src="";
+                    Cardpic.alt="invalid";
+                }
+            }
+
+        
+        
+    </script>
+</head>
+<body class="container-fluid">
+    <dl>
+        <dt>Username</dt>
+        <dd><input type="text" id="username" onblur="Verifyname()"></dd>
+        <dd id="Nameerror"></dd>
+        <dt>Email</dt>
+        <dd><input type="text" id="Email" onblur="Verifyemail()"></dd>
+        <dd id="Emailerror"></dd>
+        <dt>Your Card Number</dt>
+        <dd class="input-group"><input type="text" id="Cardnumber" onkeyup="Verifycard()">
+        <img id="pic" width="50" height="30"></dd>
+        
+    </dl>
+</body>
+</html>

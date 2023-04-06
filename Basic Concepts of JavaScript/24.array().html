@@ -1,0 +1,13 @@
+<script>
+    var values;
+    values = new Array();
+    values[0] = 10;
+    values[1] = "A";
+    values[2] = true;
+    values["3"] = 20;
+
+    for(var property in values) {
+           document.write(`${property} [${typeof property}] - ${values[property]} (${typeof values[property]}) <br>`);
+    }
+   
+</script>

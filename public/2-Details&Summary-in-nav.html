@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Details & Summary in Nav</title>
+        <style>
+            details div{
+                border: 3px solid blue;
+            
+                font-size: 20px;
+                width: 150px;
+                padding: 5px;
+                margin-left: 20px;
+                margin-bottom: 10px;
+            }
+            summary{
+                font-size: 24px;
+                color:  blue;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <menu>
+                <div>
+                    <details open>
+                        <summary>Electronics</summary>
+                        <div>Smart Phone</div>
+                        <div>Television</div>
+                        <div>Watches</div>
+                    </details>
+                </div>
+                <div>
+                    <details>
+                        <summary>Footwear</summary>
+                        <div>Casulas</div>
+                        <div>Boots</div>
+                        <div>Sneaker's</div>
+                    </details>
+                </div>
+                <div>
+                    <details>
+                        <summary>Fashion</summary>
+                        <div>Men's Clothing</div>
+                        <div>Women's Clothing</div>
+                        <div>Kid's Clothing</div>
+                    </details>
+                </div>
+            </menu>
+        </nav>
+    </body>
+</html>

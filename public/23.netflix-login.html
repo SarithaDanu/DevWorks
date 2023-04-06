@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+             body{
+            background:cover;
+            font-family: arial;
+            color: rgb(128, 128, 128);
+        }
+       section{
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            width: 450px;
+            padding: 57px;
+            margin-top: 30px;
+            margin-left: 500px;
+            background-color: rgba(0, 0, 0, 0.6)
+        }
+        .main{
+            background-color: rgba(0, 0, 0, 0.7)
+            
+        }
+        header img{
+            margin-left: 45px;
+            margin-top: 15px;
+
+        }
+       
+        .checkbox-line{
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        p{
+            font-size: 14px;
+            color: grey;
+        }
+        input{
+            padding: 15px;
+        }
+        h1{
+            color: white;
+           font-size: 35px;
+           font-weight: bold;
+          padding-bottom: 10px;
+        }
+        div  .b{
+            color: white;
+        }
+        a:hover{
+           cursor: grab;
+           text-decoration: underline;
+           
+        }
+        input{
+            height: 54px;
+        }
+        button{
+            height: 54px;
+        }
+        #email:valid+div{
+            display: none;
+        }
+        #email:invalid+div{
+            display: block;
+            color: rgba(255, 98, 0, 0.854);
+            font-size: 14px;
+        }
+        #password:valid+div{
+            display: none;
+        }
+        #password:invalid+div{
+            display: block;
+            color: rgba(255, 98, 0, 0.854);
+            font-size: 14px;
+        }
+      
+       #email:invalid{
+        background-color: #333333;
+        border: 1px solid transparent;
+        border-bottom:2px solid rgba(255, 98, 0, 0.854) ;
+       }
+
+       #password:invalid{
+        background-color: #333333;
+        border: 1px solid transparent;
+        border-bottom:2px solid rgba(255, 98, 0, 0.854) ;
+       }
+      input.Check-box{
+        width: 17px;
+        }
+        
+      </style>
+    </head>
+    <body background="../images/netflix-banner1.png">
+        <div class="main">
+            <header>
+                <img src="../images/netflix-logo.jpg" width="177px">
+            </header>
+            <section>
+                <div>
+                   <form > <h1>Sign In</h1>
+
+                    <input type="email/tel" required class="form-control  w-100 mt-3 p-3 " placeholder="Email or phone number" id="email" name="emailid">
+                    <div>Please enter a valid email address or phone number.</div>
+
+                    <input type="password" required class="form-control mt-3 p-3" placeholder="Password" id="password" name="password">
+                    <div>Your password must contain between 4 and 60 characters.</div>
+
+                    <button   class="btn btn w-100 mt-5 mb-2 p-3" id="button"  style="background-color: red; color: white;">
+                        <span>Sign In</span>
+                    </button>
+
+                    <div class="checkbox-line mb-4 ">
+                        <div class="input-group-text" style="background-color:transparent; color:grey; border:0px solid black; margin-top:-20px; font-size: 13px;">
+                            <input type="checkbox"  checked="checked" class="Check-box" >
+                            <span class="remember">&nbsp;Remember me</span>
+                        </div>
+                        <div>Need help?</div>
+                    </div>
+
+                    <br>
+
+                    <div class="mb-2">
+                        New to Netflix?
+                        <a href="#" class="b">Sign up now.</a href="#">
+                    </div>
+
+                    <p class="mb-5">
+                        This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                        <a href="#">Learn more.</a>
+                    </p></form>
+                </div>
+            </section>
+        </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script type="text/javascript">
+    function ToggleClick(){
+        var poster=document.getElementById("poster");
+        var btnToggle=document.getElementById("btnToggle");
+        poster.style.display=(poster.style.display=="block")? "none" : "block";
+        btnToggle.innerHTML=(btnToggle.innerHTML=="Show")? "Hide": "Show";
+    }
+    function StockChange(){
+        var optStock= document.getElementById("optStock");
+        var lblStock= document.getElementById("lblStock");
+        lblStock.innerHTML=(optStock.checked)? "Available" :"Out of Stock";
+    }
+   </script>
+</head>
+<body>
+    <div>
+        <button id="btnToggle" onclick="ToggleClick()"> Show </button>
+        <div id="poster" style="margin-top: 20px; display: none;">
+           <img src="../images/drishyam.jpg" width="200" height=" 200"> 
+        </div>
+    </div>
+    <div style="margin-top:20px;">
+        Stock: <input type="checkbox" id="optStock" onchange="StockChange()"><span id="lblStock">Out of Stock</span>
+    </div>
+</body>
+</html>

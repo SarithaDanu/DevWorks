@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write()</title>
+    <script type="text/javascript">
+        function DeleteClick(){
+          flag=confirm("Delete Record \n Record will be deleted\n Are you sure?") ;
+          if(flag==true){
+            document.write("<h2>Record Deleted</h2><p><b><i>Selected Record Deleted Successfully.. </i></b></p><p><a href='3.document.write().html'");
+          }  
+          else{
+            alert("Delete Cancelled!");
+          }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+</body>
+</html>

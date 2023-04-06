@@ -1,0 +1,75 @@
+
+
+good morning is from 00 to 12:50pm <br>
+good Afternoon from 1 to 3:59pm
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        var weekdays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        function ShowTime(){
+            var now = new Date();
+            document.getElementById("lblTime").innerHTML = now.toLocaleTimeString();
+        }
+        function ShowDate(){
+            var now = new Date();
+            document.getElementById("lblDate").innerHTML = weekdays[now.getDay()]+" "+now.getDate()+"-"+months[now.getMonth()]+" "+now.getFullYear();
+            var hours=now.getHours();
+            var lblSalute=document.getElementById("lblSalute");
+            var poster=document.getElementById("poster");
+            if(hours>=00 && hours<=12){
+                lblSalute.innerHTML="Good Morning!".fontsize(30);
+                poster.src="../images/goodmorning.gif";
+            }else if(hours>12 && hours<=16){
+                lblSalute.innerHTML="Good Afternoon!".fontsize(30);
+                poster.src="../images/goodafternoon.gif";
+            }else if(hours>16 && hours<=23){
+               lblSalute.innerHTML="Good Evening!".fontsize(30);
+               poster.src="../images/goodevening.gif"; 
+            }
+        }
+        function bodyload(){
+            setInterval(ShowTime,1000);
+            ShowDate();
+        }
+    </script>
+    <style>
+        #poster{
+            border-radius: 200px;
+            width: 250px;
+            height: 250px;
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body class="container-fluid" onload="bodyload()">
+  <div class="bg-dark text-white d-flex justify-content-between p-2 mt-2">
+    <div>
+        <h3>Shopper.</h3>
+    </div>
+    <div>
+        <h3><span id="lblIcon"></span><span id="lblDate"></span>
+        </h3>
+    </div>
+    <div>
+        <h3><span class="bi bi-clock"></span><span id="lblTime"></span></h3>
+    </div>
+  </div> 
+  <main class="d-flex justify-content-center align-items-center" style="height: 400px;">
+    <div class="text-center">
+        <img id="poster">
+        <h1 id="lblSalute"></h1>
+    </div>
+  </main> 
+</body>
+</html>

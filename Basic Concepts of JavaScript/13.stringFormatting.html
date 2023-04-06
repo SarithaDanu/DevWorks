@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function Submitclick(){
+            var username=document.getElementById("Username").value;
+            var userError=document.getElementById("userError");
+            if(username==""){
+                userError.innerHTML="Username Required*".fontcolor('red').bold().italics();
+            }else{
+                userError.innerHTML=`hello! ${username}`;
+            }
+        }
+        function ChangeCase(){
+            var username=document.getElementById("Username").value;
+            document.getElementById("Username").value=username;
+
+        }
+
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onblur="ChangeCase()" id="Username" placeholder="ENTER BLOCK LETTERS ONLY"></dd>
+        <dd id="userError"></dd>
+    </dl>
+    <button onclick="Submitclick()">Submit</button>
+</body>
+</html>

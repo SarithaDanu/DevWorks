@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+          
+            .customLegend {
+                border: 1px solid #060505;
+                padding: 2em 0 1em;
+                /* Note: A whitespace cannot appear between the number and the unit. However, if the value is 0, the unit can be omitted. */
+                 margin-top: 2em;
+                /*em = Relative to the font-size of the element (2em means 2 times the size of the current font) */
+                position: relative;
+            }
+            .customLegend legend {
+                border: 0;
+                background: #fff;
+                width: auto;
+                transform: translateY(-50%);
+                position: absolute;
+                top: 0; left: 1em;
+                padding: 0 .5em;
+            }
+           
+            .display1:hover p{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body class="container-fluid" bgcolor="yellowgreen">
+        <button class="btn btn-primary position-relative mb-3">
+            <span>Message</span>
+            <span class="bi bi-bell badge bg-dark position-absolute">5</span>
+        </button>
+        <br>
+        <button class="btn btn-primary position-relative">
+            <span>Notification</span>
+            <span class="badge bg-dark position-absolute">
+                <span class="bi bi-bell">5</span>
+            </span>
+        </button>
+        <form>
+            <fieldset class="customLegend">
+                <legend>my notes</legend>
+                <dt>saritha</dt>
+                <dd>b.tech</dd>
+                <dt>chandni</dt>
+                <dd>degree</dd>
+            </fieldset>
+        </form>
+        <p>click below</p>
+        <div>
+            <p class="display1">this is the best place in the world! have you imagined where is it. it is where you live ,your house.</p>
+        </div>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

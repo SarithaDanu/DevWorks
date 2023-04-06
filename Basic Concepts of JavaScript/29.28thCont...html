@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+       var categories=["All","Television","AC","Mobile","Oven"];
+       function bodyload(){
+        for(var item of categories){
+            var tr=document.createElement("tr");
+            var td=document.createElement("td");
+            td.innerHTML=item;
+            tr.appendChild(td);
+            document.querySelector("tbody").appendChild(tr);
+
+            var li=document.createElement("li");
+            li.innerHTML=`<input type="checkbox" value=${item}>${item}`;
+            document.querySelector("ul").appendChild(li);
+
+            var OlLi=document.createElement("li");
+            OlLi.innerHTML=item;
+            document.querySelector("ol").appendChild(OlLi);
+
+            var opt=document.createElement("option");
+            opt.text=item;
+            opt.value=item;
+            document.querySelector("select").appendChild(opt);
+
+            var div=document.createElement("div");
+            var anchor=document.createElement("a");
+            anchor.href="#";
+            anchor.innerHTML=item;
+            div.appendChild(anchor);
+            document.querySelector("nav").appendChild(div);
+        }
+        
+        
+       }
+    </script>
+</head>
+<body onload="bodyload()" class="container-fluid">
+    <h3>TABLE</h3>
+  <table>
+    <thead>
+        <tr>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <h3>CHECKBOX</h3>
+  <ul>
+
+  </ul>
+   <h3>CATEGORIES LIST</h3>
+   <ol>
+
+   </ol>
+   <h3>SELECT CATEGORY</h3>
+   <select>
+
+   </select>
+   <h3>NAVBAR</h3>
+   <nav>
+
+   </nav>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MX Player - Play Music Videos, Watch Movies..</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{  
+            color: white;
+            font-family: arial;
+            background-color: rgba(0, 0, 0, 0.881);
+        }
+    
+        header{
+            display: flex;
+            justify-content: space-around;
+            background-color:black;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            height: 60px;
+            color: white;
+            margin-top: -5px;
+            position: sticky;
+            top:0px
+        }
+        header div span:hover{
+            cursor: pointer;
+            color:rgb(0, 132, 255) ;
+        }
+        header div > span{
+            margin-left: 30px;
+        }
+        
+        #home{
+            color: rgb(0, 132, 255);
+            font-size: 20px;
+        }
+        #fire{
+            color: rgb(255, 225, 0);
+        }
+        #star{
+            color: goldenrod;
+        }
+        #add-free{
+            color: #eac190ac;
+            font-size: 15px;
+            margin-right: 5px;
+        }
+        #bell{
+            font-size: 20px;
+        }
+        #list{
+            font-size: 20px;
+        }
+        #search{
+            font-size: 16px;
+            font-weight: bold;
+        }
+        select{
+           
+            appearance: none;
+            background-color: transparent;
+            border-color: black;
+            color:white;
+            font-size: 15px;
+        }
+        option{
+            background: rgba(0, 0, 0, 0.751);
+            color: white;
+            width: 900px;
+        }
+        .add-free-btn {
+            background-color: rgb(39, 38, 38);
+            padding: 4px;
+            padding-right: 15px;
+            border:1px solid #eac190ac;
+            border-radius: 15px;
+            color: white;
+            width: 100px;
+         
+        }
+        h2{
+            padding: 10px;
+        }
+        h2 span{
+            color: rgb(16, 134, 253);
+            
+        }
+        .container-1,.container-2{
+           display: flex;
+           justify-content: space-between;
+           
+        }
+        .container-1 span{
+            transition: 1s;
+            
+        }
+        .container-1 span:hover{
+        transform: scale3d(1,1,1);
+        box-shadow: 1px 1px 8px black;
+        transition: 1s;
+        margin:-20px;
+        /* z-index: 1; */
+            cursor: pointer;
+        }
+        section{
+            margin-top: -20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>   
+        <div class="MX-logo">
+            <img src="../images/mxplayter-logo.jpg" alt="logo" width="150">
+        </div>
+       <div>
+            <span id="home" class="bi bi-house-door-fill"></span>
+            <span>
+                <select>
+                    <option>Shows</option>
+                    <option >Drama</option>
+                    <option >Thriller</option>
+                    <option >Reality</option>
+                    <option >Crime</option>
+                    <option >Comedy</option>
+                </select>
+            </span>
+            <span>
+                <select>
+                    <option>Movies</option>
+                    <option>Telugu</option>
+                    <option>Tamil</option>
+                    <option>Hindi</option>
+                    <option>Bhojpuri</option>
+                    <option>Malayalam</option>
+                </select>
+            </span>
+            <span>New & Hot <span id="fire" class="bi bi-fire"></span></span>
+            <span>MX Gold <span id="star" class="bi bi-star-fill"></span></span>
+            <span>MX VDesi</span>
+            <span>
+                <select>
+                    <option>Hindi</option>
+                    <option>Tamil</option>
+                    <option>Punjabi</option>
+                    <option>English</option>
+                    <option>Telugu</option>  
+                </select>
+            </span>
+            <span>Buzz</span>
+        </div>
+        <div>
+            <span id="search"  class="bi bi-search"></span>
+            <span class="add-free-btn"> <span id="add-free" class="bi bi-play-circle-fill"></span>GO AD-FREE</span>
+            <span  id="bell"   class="bi bi-bell-fill"></span>
+            <span>Login</span>
+            <span id="list"   class="bi bi-list"></span>
+           
+        </div>
+    </header>
+    <section>
+    <div>
+        <h2>Trending In Movies <span class="bi bi-chevron-right"></span></h2>
+    <div class="container-1">
+            <span class="robinhood"><img src="../images/hoodrobin.jpg" height="346"></span>
+            <span><img src="../images/tamedun.jpg" height="346"></span>
+            <span><img src="../images/traintobusan.jpg" ></span>
+            <span><img src="../images/maxsteel.jpg"></span>
+            <span><img src="../images/bleedingsteel.jpg"></span>
+            <span><img src="../images/monkeyking.jpg"></span>
+            
+            
+        </div>
+    </div>  
+    <div>
+        <h2>Trending Movies on MX <span class="bi bi-chevron-right"></span></h2>
+        <div class="container-2">
+            <span><img src="../images/olympushasfallen.jpg"></span>  
+            <span><img src="../images/phobia.jpg"></span>  
+            <span><img src="../images/thadaka.jpg"></span>  
+            <span><img src="../images/queen.jpg"></span>  
+            <span><img src="../images/rajkumar.jpg"></span>  
+            <span><img src="../images/maxsteel.jpg"></span>  
+        </div>
+    </div>
+       
+    </section>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!-- border radius iframe nahi laga -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Youtube</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    </head>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            background-color: black;
+            padding: 30px;
+        }
+        input{
+            
+            width: 500px;
+            border-color: black;
+            background-color: black;
+        }
+        .div1 .bi{
+         font-size: 30px;
+         padding-right:30px;
+         padding-bottom: 15px;
+
+        }
+        .div2 button{
+            border-radius: 25px;
+            border-color:rgba(245, 245, 245, 0.342);
+            padding: 5px;
+         
+            background-color: black;
+        }
+        .div2 button span{
+            color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            font-size: 16px;
+        }
+        .div2 >span{
+            color: white;
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        .div3 button,.middle-nav button{
+            border-radius: 15px;
+            border-color:rgba(255, 255, 255, 0.299);
+            padding: 6px;
+            color: rgb(0, 149, 255);
+            background-color: black;
+            width: 100px;
+            margin-left: 17px;
+        }
+        nav{
+            background-color: black;
+            color: rgba(245, 245, 245, 0.785);
+            padding-left: 15px;
+            font-family: arial;
+            
+        }
+        nav div{
+            margin-bottom: 10px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 1.8fr 10.2fr;
+        }
+        nav div span{
+            margin-right: 20px;
+        }
+        nav div{
+            padding: 7px;
+        }
+        .videos{
+            background-color: black;
+            height: 500px;
+            font-family: arial;
+            display: flex;
+        }
+        .video{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        iframe{
+            border-radius: 30px;
+        }
+        main{
+            color: white;
+        }
+      
+        .channel-name,.views{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: grey;
+            font-size: 13px;
+        }
+       .text-x{
+        display: flex;
+       }
+       .title{
+        font-size: 14px;
+       }
+    </style>
+    <body>
+        <header>
+            <div class="div1">
+                <span class="bi bi-list"></span>
+                <span>
+                    <img src="../images/yt-logo.jpg" alt="youtube-log0" width="55%">
+                </span>
+            </div>
+            <div class="div2">
+                <button>
+                    <span class="text">Search</span>
+                    <input type="text">
+                    <span class="bi bi-search"></span>
+                </button>
+                <span class="bi bi-mic-fill"></span>
+            </div>
+            <div class="div3">
+                <span class="bi bi-three-dots-vertical"></span>
+                <button>
+                    <span class="bi bi-person-circle">&nbsp;&nbsp;Sign in</span>
+                </button>
+            </div>
+        </header>
+        <section>
+            <nav>
+                <div class="nav">
+                    <div>
+                        <span class="bi bi-house-door-fill"></span>
+                        <span>Home</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-collection-play"></span>
+                        <span> Subscriptions</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-clock-history"></span>
+                        <span> History</span>
+                    </div>
+                </div>
+                <hr color="grey" size="1">
+                <div class="middle-nav">
+                    <div>Sign in to like Videos, comment, and subscribe</div>
+                    <button>
+                        <span class="bi bi-person-circle">&nbsp;&nbsp;Sign in</span>
+                    </button>
+                </div>
+                <hr color="grey" size="1">
+                <div class="nav">
+                    <div>Explore</div>
+                    <div>
+                        <span class="bi bi-fire"></span>
+                        <span>Trending</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-music-note"></span>
+                        <span>Music</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-film"></span>
+                        <span>Movies</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-broadcast"></span>
+                        <span>Live</span>
+                    </div>
+                    <div>
+                        <span class=" bi bi-controller"></span>
+                        <span>Gaming</span>
+                    </div>
+                    <div>
+                        <span class="bi bi-lightbulb"></span>
+                        <span>Learning</span>
+                    </div>
+                </div>
+            </nav>
+            <main>
+                <div>
+                    <img src="../images/yt-banner.jpg" width="1290px">
+                </div>
+                <div class="videos">
+                    <div class="video">
+                        <iframe
+                            src="https://www.youtube.com/embed/es4x5R-rV9s"
+                            frameborder="0"
+                            height="240px"
+                            width="300px" 
+                        ></iframe>
+                        <div class="text-x">
+                            <div>
+                                <img src="../images/amazon-yt-logo.jpg" width="50px">
+                            </div>
+                            <div>
+                                <div class="title">Amazon 4k- The World's Largest Tropical Rainforest Part 2 | Jungle Sounds | Scenic</div>
+                                <div class="channel-name">
+                                    Scenic Scenes
+                                    <span class="bi bi-check-circle-fill"></span>
+                                </div>
+                                <div class="views">
+                                    18M views
+                                    <span class="bi bi-dot" color="grey">9 months ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <iframe
+                            src="https://www.youtube.com/embed/gH_RYRwVrVM"
+                            frameborder="0"
+                            height="240px"
+                            width="300px"
+                        ></iframe>
+                        <div class="text-x">
+                            <div>
+                                <img src="../images/kantara-yt-logo.jpg" width="40px">
+                            </div>
+                            <div>
+                                <div class="title">Kantara - Varaha Roopam(Lyric Video)|Sai Vignesh | Rishab Shetty | Ajaneesh</div>
+                                <div class="channel-name">
+                                    Hombale Films
+                                    <span class="bi bi-check-circle-fill"></span>
+                                </div>
+                                <div class="views">
+                                    30M views
+                                    <span clas="bi bi-dot">2 weeks ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <iframe
+                            src="https://www.youtube.com/embed/7RKJ-WhwrfY"
+                            frameborder="0"
+                            height="240px"
+                            width="300px"
+                        ></iframe>
+                        <div class="text-x">
+                            <div class="logo">
+                                <img src="../images/krishna-yt-logo.jpg" width="40px">
+                            </div>
+                            <div>
+                                <div class="title">Best of Radhakrishn Love Songs Lyrics</div>
+                                <div class="channel-name">Askshay Gohel</div>
+                                <div class="views">
+                                    610k views
+                                    <span class="bi bi-dot">1 year ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video">
+                        <iframe
+                            src="https://www.youtube.com/embed/VdMJvu7-vRw"
+                            frameborder="0"
+                            height="240px"
+                            width="300px" 
+                        ></iframe>
+                        <div class="text-x">
+                            <div class="logo">
+                                <img src="../images/rewirs-yt-logo.jpg" width="40px">
+                            </div>
+                            <div>
+                                <div class="title">14 "SHOCKING" PSCHOLOGICAL FACTS - THAT WILL MAKE YOUR LIFE EASY| Rewirs</div>
+                                <div class="channel-name">
+                                    Rewirs
+                                    <span class="bi bi-check-circle-fill"></span>
+                               
+                                <div class="views">
+                                    967k views
+                                    <span class="bi bi-dot">2 months ago</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<script>
+    var categories=["television","mobile","laptop"];
+   
+    document.write(categories.toString()+"<br>");
+    document.write(categories.join(">>")+"<br>");
+    document.write(categories.slice(1,2)+"<br>");
+    categories.map(function(category){
+        document.write(`<div><button>${category}</button></div>`);
+    }
+    )
+    categories.map(function(category){
+        document.write(`<h2>${category}</h2>`);
+    }
+    )
+    for(var i=0;i<categories.length;i++){
+        document.write(categories[i]+"<br>");
+    }
+    
+</script>

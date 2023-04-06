@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script type="text/javascript">
+            function RegisterClick(){
+                document.getElementById("ProductDetails").style.display="block";
+                document.getElementById("btnRegister").style.display="none";
+
+                document.getElementById("lblName").innerHTML=document.getElementById(
+                    "txtName").value;
+                document.getElementById("lblPrice").innerHTML=document.getElementById(
+                    "txtPrice").value;
+                document.getElementById("lblCity").innerHTML=document.getElementById(
+                    "lstCities").value;
+
+                stockCheckBox=document.getElementById("optStock");
+                stockStatus="";
+                if(stockCheckBox.checked){
+                    stockStatus="Available";
+                }  else{
+                    stockStatus="Out of Stock";
+                }    
+                document.getElementById("lblStock").innerHTML=stockStatus;          
+            }
+            function EditClick(){
+                document.getElementById("modalRegisterbtn").innerHTML="save";
+            }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <button data-bs-toggle="modal" data-bs-target="#register" class="btn btn-primary mt-3" id="btnRegister">Register Product</button>
+        <div class="modal fade" id="register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Product Details</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>Name</dt>
+                            <dd>
+                                <input type="text" id="txtName" class="form-control">
+                            </dd>
+                            <dt>Price</dt>
+                            <dd>
+                                <input type="text" id="txtPrice" class="form-control">
+                            </dd>
+                            <dt>City</dt>
+                            <dd>
+                                <select id="lstCities" class="select-control">
+                                    <option>Choose City</option>
+                                    <option>Delhi</option>
+                                    <option>Hyd</option>
+                                </select>
+                            </dd>
+                            <dt>Stock</dt>
+                            <dd class="form-switch">
+                                <input type="checkbox" class="form-check-input" id="optStock">
+                                Available
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-bs-dismiss="modal" class="btn btn-primary" onclick="RegisterClick()" id="modalRegisterbtn">Register</button>
+                        <button data-bs-dismiss="modal" class="btn btn-danger">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="details-container d-flex justify-content-center">
+            <div  style="display: none;" id="ProductDetails">
+                <h2>Product Details</h2>
+                <dl class="row">
+                    <dt class="col-4">Product Name</dt>
+                    <dd class="col-8" id="lblName"></dd>
+                    <dt class="col-4">Product Price</dt>
+                    <dd class="col-8" id="lblPrice"></dd>
+                    <dt class="col-4">Product city</dt>
+                    <dd class="col-8" id="lblCity"></dd>
+                    <dt class="col-4">Stock Status</dt>
+                    <dd class="col-8" id="lblStock"></dd>
+                </dl>
+                <div>
+                    <button onclick="EditClick()" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#register">
+                        <span class="bi bi-pen"></span>
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>

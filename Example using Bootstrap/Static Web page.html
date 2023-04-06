@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Physics Wallah</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style>
+            @keyframes slidein {
+                from{
+                   width: 32px;
+                }
+                to{
+                    width: 0px;
+
+                }
+            }
+         #NEW{
+            animation-name: slidein;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+         }
+         #cart{
+            transform: rotate(30deg);
+         }
+         #cards{
+            display: flex; 
+            flex-direction: row;
+            height: 130px;
+            width: 320px;
+            padding: 10px;
+            border-radius: 20px;
+         }
+         #cards button{
+            border-radius: 15px;
+            font-size: 12px;
+         }
+        </style>
+    </head>
+    <body class="container-fluid" style="cursor: pointer;">
+        <div class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand">
+                    <img src="../images/PW.jpg" width="100">
+                </div>
+                <div class="collapse navbar-collapse" id="menu">
+                    <div class="dropdown">
+                        <button id="Dropdown1" class="btn btn-outline-dark btn-lg dropdown-toggle" data-bs-toggle="dropdown">
+                            <span class="text-primary">All Courses</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <span class="dropdown-text">IIT JEE</span>
+                            </li>
+                            <li class="dropdown-item">
+                                <span class="dropdown-text">NEET</span>
+                            </li>
+                            <li class="dropdown-item">
+                                <span class="dropdown-text">UPSC</span>
+                            </li>
+                            <li class="dropdown-item">
+                                <span class="dropdown-text">MBA</span>
+                            </li>
+                            <li class="dropdown-item">
+                                <span class="dropdown-text">GATE</span>
+                            </li>
+                            <li class="dropdown-item">
+                                <span class="dropdown-text">SCHOOL PREP</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div id="NEW" style="background-color: orange; width: 32px; font-size: 10px; border-radius: 2px;" class="ms-3 ps-1 pe-1 text-white">NEW</div>
+                    <div class="me-3 text-primary">
+                        <span class="bi bi-cart" id="cart"></span>
+                        <span style="font-weight: bold;">PW Store</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-lg " style="font-weight: bold; font-size: 18px;">Login/Register</button>
+                </div>
+            </div>
+        </div>
+        <main class="container-fluid" style="background-color: rgb(220, 58, 123); height: 400px;">
+            <div>
+                <div style="position: relative;  color: white;">
+                    <ul class="breadcrumb pt-3">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">gate</li>
+                        <li class="breadcrumb-item">Parakram GATE2024 Batch B Computer Science Weekday Hinglish</li>
+                    </ul>
+                    <div style="color: white; font-weight: bolder;">
+                        <div style="font-size: 45px; width:620px ;">
+                            Parakram GATE2024 Batch B Computer Science Weekday Hinglish
+                        </div>
+                        <div style="font-size: 15px; padding-top: 35px;">Special Discounted Price</div>
+                        <div>
+                            <span style="font-size: 40px;">&#8377; 4999</span>
+                            <span style="margin-right:10px; margin-left:10px;">
+                                <strike>&#8377; 5999</strike>
+                            </span>
+                            <span style="background-color:rgb(23, 202, 142); font-size:20px;  padding: 5px; border-radius: 3px;">17% OFF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card pt-2" style="width:434px; font-weight: bold; position: absolute; top:250px; right:90px;">
+                    <div class="card-header">
+                        <img src="../images/PW-cardimg.jpg" width="400">
+                        <div style="display:flex; flex-direction:column; align-items: center;  ">
+                            <div class="card-title text-dark p-2">Special Discounted Prices</div>
+                            <div>
+                                <span style="font-size: 40px; color:black;">&#8377; 5999</span>
+                                <span style="color: grey; padding:0px 20px 0px">
+                                    <strike> &#8377; 4999</strike>
+                                </span>
+                                <span style="background-color:rgb(23, 202, 142); color: white; border-radius: 15px; padding:5px;">17% OFF</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary  w-100 p-2 mt-4">Buy Now</button>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <h3 class="p-3" style="font-weight:bolder;">Batch  Details</h3>
+                    <ul style="margin-left: 30px;">
+                        <li>Parakram batch is a course for the candidates who are preparing for the GATE 2024 Examination.</li>
+                        <li>Lecture Planner & Test Planner Has been uploaded in the Batch's Notice section.</li>
+                        <li>Classes will be conducted from Monday to Friday.</li>
+                        <li>MCQs, MSQs, NATs types of questions will be discussed in the classes.</li>
+                        <li>Live lectures by the best faculties of India.</li>
+                        <li>DPPs will be provided along with daily lectures.</li>
+                        <li>The Doubt Engine will be there for solving the student's queries and doubts.</li>
+                        <li>Regular tests will be conducted.</li>
+                        <li>Classes will be conducted in Hinglish.</li>
+                        <li>No Refund Policy.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-weight:bolder; margin-bottom: 50px;">Top Faculties</h3>
+                    <div class="carousel slide " data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card" id="cards">
+                                    <div class="card-text" style="margin-right: 90px;">
+                                        <div class="text-primary">Chandan Jha Sir</div>
+                                        <div class="pb-3">ISRO Qualified</div>
+                                        <div>
+                                            <button class="btn btn-primary">Know More</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../images/chandanjha.jpg" width="95">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NASA.org</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript">
+            function bodyload(){
+                fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    for(var item of data.photos){
+
+                        var tr=document.createElement("tr");
+                        var tdId=document.createElement("td");
+                        var tdPreview=document.createElement("td");
+                        var tdCamera=document.createElement("td");
+                        var tdRover=document.createElement("td");
+                        var tdLandingDate=document.createElement("td");
+                        var tdLaunchingDate=document.createElement("td");
+                        var tdStatus=document.createElement("td");
+
+                        tdId.innerHTML=item.id;
+                        tdPreview.innerHTML=`<a href=${item.img_src} target="_blank"><img src=${item.img_src} width="130" height="90"></a>`;
+                        tdCamera.innerHTML=item.camera.full_name;
+                        tdRover.innerHTML=item.rover.name;
+                        tdLandingDate.innerHTML=item.rover.landing_date;
+                        tdLaunchingDate.innerHTML=item.rover.launch_date;
+                        tdStatus.innerHTML=item.rover.status;
+
+                        tr.appendChild(tdId);
+                        tr.appendChild(tdPreview);
+                        tr.appendChild(tdCamera);
+                        tr.appendChild(tdRover);
+                        tr.appendChild(tdLandingDate);
+                        tr.appendChild(tdLaunchingDate);
+                        tr.appendChild(tdStatus);
+
+                        document.querySelector("tbody").appendChild(tr);
+
+                    }
+                }
+                )
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid bg-dark text-white">
+        <h2 align="center" class="mb-3 mt-3">Mars Rover Photos</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr class="text-white">
+                    <th>Photo Id</th>
+                    <th>Preview</th>
+                    <th>Camera Name</th>
+                    <th>Rover Name</th>
+                    <th>Landing Date</th>
+                    <th>Launch Date</th>
+                    <th>Status</th>
+                    
+                </tr>
+            </thead>
+            <tbody class="text-white"></tbody>
+        </table>
+    </body>
+</html>

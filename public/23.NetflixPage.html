@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Netflix India - Watch TV Shows Online</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="icon" href="../images/Netflix.N.jpg" type="image/x-icon">
+        <style>
+            body{
+                background-image: url(../images/netflix-banner1.png);
+                background-image: cover;
+                background-repeat: no-repeat;
+                color: white;
+                width: 100%;
+                font-family: dubai;
+            }
+        header{
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+            padding: 15px;
+            font-family: arial;
+        }
+        select{
+            font-size: 15px;
+            background-color: black;
+            color: white;
+            padding: 7px;
+            padding-left: 16px;
+            width: 95px;
+        }
+        .right .bi{
+            position: absolute;
+            margin-top: 7px;
+            margin-left: 6px;
+            font-size: 13px;
+        }
+        option{
+           background-color: grey;
+        }
+        #signin-btn{
+            margin-top: -5px;
+            margin-left: 17px;
+            width: 90px;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 650px;
+        }
+
+        .main{
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+       
+        .title-text{
+            width: 700px;
+            font-size: 70px;
+            font-weight: bolder;
+            line-height: 66px;
+        }
+        .subtitle-text{
+            width: 700px;
+            font-size: 28px;
+            margin-bottom: 25px;
+            margin-top: 15px;
+        }
+        .register-text{
+            width: 750px;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .get-started{
+            font-size: 35px;
+            margin-left: 15px;
+           
+        }
+        #last-btn{
+            width: 750px;
+        }
+        .row-1,.row-2{
+            border-top: 5px solid rgba(128, 128, 128, 0.708);
+            background-color: black;
+            color: whitesmoke;
+            font-size: 20px;
+            height: 500px;
+            padding: 90px;
+        }
+        .pic1{
+            float: right;
+            
+        }
+      
+        .pic-2{
+          float: left;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <header>
+                <div>
+                    <img src="../images/netflix-logo.jpg" alt="neftlix-logo" width="180">
+                </div>
+                <div class="right">
+                    <span class="bi bi-globe"></span>
+                    <select name="language">
+                        <option value="English">English</option>
+                        <option value="Hindi">हिन्दी</option>
+                    </select>
+                    &nbsp;
+                    <button class="btn btn " style="background-color:red; color:white;" id="signin-btn">
+                        <span>Sign In</span>
+                    </button>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div class="title-text">Unlimited movies, TV shows and more.</div>
+                    <div class="subtitle-text">Watch anywhere. Cancel anytime.</div>
+                    <div class="register-text">Ready to watch? Enter your mail to create or restart your membership.</div>
+                    <div class="input-group input-group-lg" id="last-btn">
+                        <input class="form-control" type="email" placeholder="Email address">
+                        <button class="btn p-2" style="background-color:red; color:white;">
+                            <span class="get-started">Get Started</span>
+                            <span class="bi bi-chevron-right">&nbsp;&nbsp;</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="row-1">
+          <div> <h1>Enjoy on your TV.</h1>
+            <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p></div>
+           <img class="pic1" src="../images/page2.jpg" alt="page2"  width="390">
+        </div>
+        <div class="row-2">
+          <div> <h1>Download your shows to watch offline.</h1>
+            <p>Download your shows to watch offline.
+             Save your favourites easily and always have something to watch.</p></div>
+           <img  class="pic2" src="../images/page3.jpg" alt="page3" width="390" >
+        </div>
+    </body>
+</html>

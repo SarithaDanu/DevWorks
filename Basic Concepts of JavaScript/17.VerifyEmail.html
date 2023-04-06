@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function VerifyUsername(){
+            var username=document.getElementById("UserName").value;
+            var error=document.getElementById("Error");
+            if(username.charCodeAt(0)<=65 && username.charCodeAt(0)>=90){
+                error.innerHTML="";
+            }else{
+                error.innerHTML="Name must start with Uppercase letter*".fontcolor('red');
+            }
+        }
+        function VerifyEmail(){
+            var email=document.getElementById("Email").value;
+            var error=document.getElementById("EmailError");
+
+            var posat=email.indexOf("@");
+            var posdot=email.lastIndexOf(".");
+            if(posat<=2 || (posdot-posat)<2) {
+              error.innerHTML="Invalid Email*".fontcolor('red');
+            }else{
+                error.innerHTML="";
+            }
+
+            // var domain=email.substring(email.indexOf("@")+1);
+            // if(domain!="gmail.com"){
+            //     error.innerHTML="Only gmail is allowed*".fontcolor('red');
+            // }else{
+            //     error.innerHTML="";
+            // }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Username</dt>
+        <dd><input type="text" id="UserName" onblur="VerifyUsername()"></dd>
+        <dd id="Error"></dd>
+    </dl>
+    <dl>
+        <dt>Email</dt>
+        <dd><input type="text" id="Email" onblur="VerifyEmail()"></dd>
+        <dd id="EmailError"></dd>
+    </dl>
+</body>
+</html>

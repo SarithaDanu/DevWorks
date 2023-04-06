@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>amazon-card</title>
+        <style>
+            section{
+                display: flex;
+                margin-top: -300px;
+            }
+            section > div{
+                height:500px;
+                background-color: white;
+                margin: 10px;
+                box-shadow: 2px 2px 3px grey ;
+                padding: 20px;
+                width: 300px;
+
+            }
+            .card{
+                width: 100%;
+                padding: 5px;
+                margin: 5px;
+            }
+            .card-header{
+                font-family: arial;
+                font-size: 15px;
+            }
+            .row{
+                display: grid;
+                grid-template-columns: 6fr 6fr;
+                grid-gap:20px;
+            }
+            .card-img{
+                width:100%;
+                margin:5px;
+            }
+            .card-footer{
+                color:blue
+            }
+            .sign-card-header{
+                height: 200px;
+                box-shadow: 2px 2px 2px black;
+                padding: 20px;
+                font-family: Arial;
+            }
+            button{
+                width:100%;
+                font-size:20px;
+                background-color: gold;
+                border: none;
+                padding:10px;
+                border-radius: 10px;
+            }
+            .laptop{
+               padding: 10px;
+             }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="../images/amazon-card-bg.jpg" width="100%">
+        </header>
+        <section>
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Up to 60% off | Styles for Men</h2>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="../images/clothing.jpg" class="card-img">
+                            <p>Clothing</p>
+                        </div>
+                        <div>
+                            <img src="../images/footwear.jpg" class="card-img">
+                            <p>Footwear</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="../images/watches.jpg" class="card-img">
+                            <p>Watches</p>
+                        </div>
+                        <div>
+                            <img src="../images/bags&luggage.jpg" class="card-img">
+                            <p>Bags & luggage</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>See all offers</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Revamp your home in style</h2>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="../images/bedsheets.jpg" class="card-img">
+                            <p>bedsheets, curtains & more</p>
+                        </div>
+                        <div>
+                            <img src="../images/home-decoration.jpg" class="card-img">
+                            <p>Home decoration</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="../images/home-storage.jpg" class="card-img">
+                            <p>Home storage</p>
+                        </div>
+                        <div>
+                            <img src="../images/lightning-solutions.jpg" class="card-img">
+                            <p>Lightening solutions</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>See all offers</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Up to 60% off | Styles for Women</h2>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="../images/womens-clothing.jpg" class="card-img">
+                            <p> Women's Clothing</p>
+                        </div>
+                        <div>
+                            <img src="../images/footwear+handbags.jpg" class="card-img">
+                            <p>Footwear+Handbags</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <img src="../images/watch.jpg" class="card-img">
+                            <p>Watches</p>
+                        </div>
+                        <div>
+                            <img src="../images/fashion-jwellery.jpg" class="card-img">
+                            <p>Fashion jewellery</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>See all offers</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    <div class="sign-card-header">
+                        <h2>Sign in for your best experience</h2>
+                        <button>Sign in securely</button>
+                    </div>
+                    <div>
+                        <img src="../images/laptop.jpg" class="laptop">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

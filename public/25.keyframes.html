@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            overflow: hidden;
+        }
+        @keyframes slidein{
+            from{
+                margin-left: 120%;
+                width: 10px;
+                transform: rotate(180deg);
+                opacity: 0;
+            }
+            50%{
+                transform: rotate(-180deg);
+            }
+            to{
+                margin-left: 0px;
+                width: 50%;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+        }
+        @keyframes zoomin{
+            from{
+                font-size: 30px;
+            }
+            to{
+                font-size: 70px;
+            }
+        }
+        img{
+            animation-name: slidein;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* applies the same effect when the image goes back */
+            animation-direction: alternate; 
+
+        }
+        h1{
+            animation-name: zoomin;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Welcome to Naresh i technologies!</h1>
+        <img src="../images/ds.jpg">
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+<script>
+    //push,unshift,splice,sort,reverse
+     var categories=["Television","AC","Mobile","Laptop"];
+     categories.push("Oven");
+     categories.unshift("Microwave");
+     categories.splice(3,0,"Straightner");
+     categories.sort();
+     for(var property in categories){
+        document.write(`[${property}]-${categories[property]} <br>`);
+        
+     }
+</script>

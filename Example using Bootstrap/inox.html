@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>INOX</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <style type="text/css">
+     
+        body{
+            background-image: url(../images/inox-banner.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color:rgb(200, 200, 205);
+            height: 486px;
+            font-family: arial;
+            
+        }
+        nav {
+            display: flex;
+            width: 895px;
+            height: 33px;
+            font-size: 12px;
+            color: rgb(232, 226, 226);
+            background-color: rgba(5, 5, 5, 0.6);
+            margin-left: 420px;
+            margin-top: -8px;
+           
+        }
+        
+        nav div{
+           margin-top: 4px;
+           padding: 8px;
+           padding-left: 10px;
+           padding-right: 10px;
+            border-left: 1px solid grey;
+        }
+
+        
+        nav a{
+            text-decoration: none;
+            color: rgba(245, 241, 241, 0.756);
+        }
+        nav select{
+            width: 75px;
+            color: rgba(193, 193, 193, 0.895);
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        .socials span{
+            padding: 9px;
+            border-right: 1px solid rgba(128, 128, 128, 0.674);
+            font-size: 13px;
+        }
+
+        .socials span:last-child{
+            border-right: none;
+        }
+       
+        nav div:first-child{
+            border-left: none;
+        }
+
+        .nav-2{
+            display: flex;
+            margin-left: 400px;
+            font-size: 10px;
+            font-weight: bold;
+            color: black;
+            height: 43px;
+            width: 950px;
+            background-color: black;
+            /* position: sticky;
+            top: 0px; */
+        }
+        .nav-2 div{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 5px;
+        }
+        .nav-2 a{
+            text-decoration: none;
+            color: rgba(235, 226, 226, 0.97);
+        }
+         .nav-2 input{
+            background-color: black;
+            border: 1px solid rgba(128, 128, 128, 0.505);
+            width: 200px;
+            height: 31px;
+            margin-top: -25px;
+            margin-bottom: 200px;
+            margin-left: 5px;
+        }
+        input::placeholder{
+            color: rgb(245, 241, 241);
+          font-size: 11px;
+          padding: 5px;
+         
+        }
+       
+        .nav-2  div:last-child{
+           margin-top: -10px;
+           
+        }
+
+        .nav-2 .button{
+            background-color: red;
+            color: white;
+            border: transparent;
+            padding: 4px;
+            margin-left: -36px;
+            padding-left: 7px;
+            padding-right: 7px;
+            
+        }
+        .button .bi{
+            font-size: 15px;
+            
+        }
+        .nav-2 span{
+             margin-left: 4px;
+        }
+        .new{
+            background-color: orange;
+            border-radius: 7px;
+            font-family: calibri;
+            padding: 2px;
+            color: white;
+        }
+       .Select-bar{
+        display: flex;
+        height: 55px;
+        width: 960px;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+       }
+       .Select-bar select{
+        background-color: rgba(0, 0, 0, 0.7);
+        color: rgba(255, 255, 255, 0.886);
+        font-size: 14px;
+        margin-left: 5px;
+        padding: 7px;
+        width: 150px;
+       }
+       .Select-bar select option{
+        all: initial;
+       }
+       .bts {
+        background-color: rgb(185, 24, 24);
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.92);
+        margin-left: 10px;
+        height: 35px;
+        width: 165px;
+       }
+       .small-select{
+        display: flex;
+       }
+       .quick-booking{
+        background-color: rgb(185, 24, 24);
+        font-size: 13px;
+        padding: 8px;
+        color: white;
+       }
+       .by-movie{
+        background-color: rgba(0, 0, 0, 0.82);
+        font-size: 13px;
+        padding: 8px;
+        color: yellow;
+       }
+       .stick{
+        background-color: rgba(0, 0, 0, 0.82);
+        font-size: 17px;
+        padding-top: 5px;
+        color: rgba(255, 255, 255, 0.644);
+       }
+       .by-cinema{
+        background-color: rgb(0, 0, 0);
+        font-size: 13px;
+        padding: 8px;
+        color: white;
+       }
+       .attached-nav{
+        margin-left: 300px;
+        margin-top: 270px;
+        position: sticky;
+        top: 0px;
+       }
+
+       .card-container{
+        background-color: whitesmoke;
+        justify-content: space-evenly;
+        box-shadow: 10px 10px 10px rgb(164, 157, 157);
+        margin-left: 200px;
+        padding: 10px;
+        display: flex;
+        width: 1140px;
+        height: 260px;
+        color: black;
+       }
+
+       .card-container div{
+        margin-left: 3px;
+       }
+       .card-container div:last-child{
+        margin-right: 5px;
+       }
+       h4{
+        margin: 5px;
+        font-weight: bold;
+        font-size: 12px;
+        }
+       
+        .card-container div:nth-of-type(3){
+            font-size: 10px;
+        }
+        .card-container button:nth-of-type(3){
+            border-color: grey;
+        }
+
+        .card-container div:nth-of-type(2){
+            font-size: 10px;
+        }
+       aside{
+      font-size: 22px;
+      font-weight: bold;
+      position: fixed;
+      right: 0px;
+      bottom: 5px;
+      background-color: white;
+      color: blue;
+   
+    }
+       aside div{
+        padding-left:9px;
+        padding-right: 5px;
+        margin-bottom: -3px;
+       }
+       aside div:last-child{
+        width: 30px;
+        font-size: 10px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.927);
+        line-height: 10px;
+        padding-bottom: 5px;
+        color: red;
+       
+       }
+       aside div:first-child{
+        font-size: 30px;
+        margin-bottom: -10px;
+       }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <select>
+                        <option> Mumbai</option>
+                        <option> Quick selection</option>
+                    </select>
+                </div>
+                <div>
+                    <a href="#">Register</a> /
+                    <a href="#">Login</a>
+                </div>
+                <div>
+                    <a href="#">Resend Booking Confirmation</a>
+                </div>
+                <div>
+                    <a href="#">contact@inoxmovies.com</a>
+                </div>
+                <div>
+                    <a href="#">INOX Rewards</a>
+                </div>
+                <div>
+                    <a href="#">Career</a>
+                </div>
+                <div class="socials">
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-linkedin"></span>
+                    <span class="bi bi-youtube"></span>
+                </div>
+            </nav>
+            <div class="nav-2">
+                <div>
+                    <a href="#">HOME</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">CINEMAS</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">SCHEDULES</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">PROMOTIONS</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">MERCHANDISE</a>
+                    <span class="new">NEW</span>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">BULK BOOKING</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">GIFTING</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">ADVERTISE</a>
+                    <span id="line" style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">CORPORATE</a>
+                    <span style="color: rgb(87, 144, 164);">|</span>
+                </div>
+                <div>
+                    <a href="#">ABOUT US</a>
+                </div >
+                <div>
+                    <input type="text" placeholder="Search for movie, cinema">
+                    <button class="button">
+                        <span class="bi bi-search"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="attached-nav">
+                <div class="small-select">
+                    <div class="quick-booking">QUICK BOOKING</div>
+                    <div class="by-movie"> By Movie</div>
+                    <div class="stick">|</div>
+                    <div class="by-cinema"> By Cinema</div>
+                </div>
+                <div class="Select-bar">
+                    <div>
+                        <select class="select-movie">
+                            <option>Select Movie</option>
+                            <option>An Action Hero (U/A)</option>
+                            <option>Violent Night(A)</option>
+                            <option>Devotion(U)</option>
+                            <option>Ghosta Eka Paithanichi (U/A)</option>
+                            <option>HIT (The Second Case) (A)</option>
+                            <option>Bhagwan Bachave (U/A)</option>
+                            <option>DSP (U/A)</option>
+                            <option>Gattakusthi (U)</option>
+                            <option>Ekdam Kadak (U/A)</option>
+                            <option>FIFA World Cup 2022 - Brazil(U)</option>
+                            <option>Baal Bhaarati (U)</option>
+                            <option>Avatar.The Way of Water (U/A)</option>
+                            <option>Gold (U)</option>
+                            <option>Uunchai (U)</option>
+                            <option>Lyle Lyle Crocodile (U)</option>
+                            <option>Bhediya (U/A)</option>
+                            <option>Medal (U)</option>
+                            <option>Strange World (U)</option>
+                            <option>Drishayam 2 (U/A)</option>
+                            <option>Masooda (A)</option>
+                            <option>Aum Mangalam Singlem (U)</option>
+                            <option>Black Panther:Wakanda Fore...(U/A)</option>
+                            <option>Kantara (U/A)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>Select Cinema</option>
+                            <option>INOX Megaplex, Inorbit Mall</option>
+                            <option>INOX Neelyog Square Mall,Ghatkopar(E)</option>
+                            <option>INOX R-City Ghatkopar</option>
+                            <option>METRO INOX Cinemas, Marine Lines</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>Select Date</option>
+                            <option>TODAY 2
+                                <sup>nd</sup> December
+                            </option>
+                            <option>TOMORROW 3
+                                <sup>rd</sup> December
+                            </option>
+                            <option>SUNDAY 4
+                                <sup>th</sup>December
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>Select Timing</option>
+                            <option>08:45 AM Hindi[INSIGNIA]</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>Select Seats</option>
+                            <option>1</option>
+                            <option> 2</option>
+                            <option>3</option>
+                            <option> 4</option>
+                            <option> 5</option>
+                            <option> 6</option>
+                            <option> 7</option>
+                            <option> 8</option>
+                            <option> 9</option>
+                            <option> 10</option>
+                            <option> 11</option>
+                            <option>12</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="bts">BOOK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="avatar-card">
+                    <div>
+                        <img src="../images/avatar.jpg">
+                    </div>
+                    <h4>Avatar: The way of Water</h4>
+                    <div>English, Hindi</div>
+                    <div>
+                        <button style="border:1px solid grey">U/A</button> Action | 192 mins
+                    </div>
+                </div>
+                <div class="drishaym-card">
+                    <div>
+                        <img src="../images/drishyam.jpg">
+                    </div>
+                    <h4>Drishyam 2</h4>
+                    <div>Hindi</div>
+                    <div>
+                        <button style="border:1px solid grey">U/A</button> Drama | 140 mins
+                    </div>
+                </div>
+                <div class="Bhediya-card">
+                    <div>
+                        <img src="../images/bhediya.jpg">
+                    </div>
+                    <h4>Bhediya</h4>
+                    <div>Hindi</div>
+                    <div>
+                        <button style="border:1px solid grey">U/A</button> Comedy Horror | 155 mins
+                    </div>
+                </div>
+                <div class="action-hero-card">
+                    <div>
+                        <img src="../images/action-hero.jpg">
+                    </div>
+                    <h4>An Action Hero</h4>
+                    <div>Hindi</div>
+                    <div>
+                        <button style="border:1px solid grey">U/A</button> Action | 132 mins
+                    </div>
+                </div>
+                <div class="violent-night-card">
+                    <div>
+                        <img src="../images/violent-night.jpg">
+                    </div>
+                    <h4>Voilent Night</h4>
+                    <div>English</div>
+                    <div>
+                        <button style="border:1px solid grey">A</button> Action | 116 mins
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+        <aside>
+            <div>f</div>
+            <div class="bi bi-twitter" style="color: rgb(18, 169, 239);"></div>
+            <div class="bi bi-instagram" style="color:rgb(0, 102, 255);"></div>
+            <div style="font-size:27px; margin-top: -6px;"> in </div>
+            <div>You Tube</div>
+        </aside>
+       
+    </body>
+</html>

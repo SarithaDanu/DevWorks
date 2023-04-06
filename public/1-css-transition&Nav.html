@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nav & Transitions</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+            section{
+                display: grid;
+                grid-template-columns: 4fr 4fr 4fr;
+                height: 400px;
+            }
+        nav div{
+            border: 1px solid black;
+            width: 150px;
+            font-size: 20px;
+            padding: 5px;
+            background-color: blue;
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            transition: 2s;
+        }
+        nav div:hover{
+            background-color: yellow;
+            cursor: grab;
+            font-size: 24px;
+            transition: 2s;
+            color: black;
+        }
+        </style>
+    </head>
+    <body>
+        <section>
+            <nav>
+                <div>
+                    <span class="bi bi-house-fill"></span>Home
+                </div>
+                <div><span class="bi bi-laptop"></span>Electronics</div>
+                <div><span class="bi bi-8-circle-fill"></span>Footwear</div>
+                <div><span class="bi bi-person-lines-fill">About</span></div>
+                <div><span class="bi bi-person-circle"></span>Contacts</div>
+            </nav>
+            <main>
+                this is the main content
+            </main>
+            <aside>
+                this is today's advertisement
+            </aside>
+        </section>
+    </body>
+</html>

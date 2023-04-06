@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+        var weekdays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+        function SubmitClick(){
+            var now = new Date(document.getElementById("date").value);
+            document.querySelector("p").innerHTML=`
+            Departure Weekday:${weekdays[now.getDay()]} <br>
+            Departure Date :${now.getDate()} <br>
+            Departure Month :${months[now.getMonth()]} <br>`;
+        }
+
+    </script>
+</head>
+<body>
+    Departure: <input type="date" id="date"><button onclick="SubmitClick()">Submit</button>
+    <p></p>
+</body>
+</html>

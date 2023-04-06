@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <style>
+        body{
+            font-family: arial;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color:black;
+            color: white;
+            padding: 20px;
+            height: 20px;
+            
+        }
+        nav{
+            margin-left: 70px;
+        }
+        nav span{
+            margin-right: 30px;
+
+        }
+        .right-header span{
+            margin-left: 20px;
+        }
+        .brand-name{
+            font-weight: bold;
+            font-size: 30px;
+            color: aqua;
+        }
+        .bi-heart-fill{
+            color: red;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .footer-head{
+            font-weight: bold;
+            font-size: 20px;
+            color: gray;
+
+        }
+        .brand-name{
+            font-weight: bold;
+            font-size: 30px;
+            color: gray;
+            margin-bottom: 20px;
+        }
+        .footer-head~div{
+            padding: 10px;
+        }
+        span{
+         
+         margin-right: 10px;
+        
+        }
+        section{
+            height: 430px;
+        }
+        .bi-facebook{
+            color: rgb(87, 64, 200);
+        }
+        .bi-instagram{
+            color: pink;
+
+        }
+        .bi-twitter{
+            color: rgb(0, 200, 255);
+        }
+        .bi-youtube{
+            color: red;
+        }
+        .socials{
+            margin-left: 20px;
+        }
+        .offer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin-top:10px ;
+        }
+        .bi-lightning-charge-fill {
+            color: gold;
+        }
+        .fashion{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+        .top-img{
+            width: 100%;
+            height: 500px;
+        }
+        .top-img-p{
+          
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px black;
+            
+            
+        }
+        .fashion1{
+            background-image: url(../images/fashion3.jpg);
+            height:400PX;
+            background-size: cover;
+            
+        }
+        .fashion2{
+            background-image: url(../images/fashion1.jpg);
+            height: 400px;
+            background-size: cover;
+        }
+        .fashion3{
+            background-image: url(../images/men.jpg);
+            height: 400px;
+            background-size: cover;
+        }
+        .fashion h2{
+            text-align: center;
+            padding-top: 130px;
+            color: #fff;
+            margin-top: 80px;
+        }
+        .fashion p{
+            padding-top: 80px;
+            
+        }
+        h2{
+            font-size: 30px;
+        }
+        button {
+            width: 50%;
+            font-size: 10px;
+            font-weight: bolder;
+            background-color:white;
+            border: none;
+            padding: 10px;
+            margin-left: 40px;
+            margin-top: -120px;
+            
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="brand-name">shopper</div>
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catlog</span>
+                    <span>Doc</span>
+                    <span>Blog</span>
+                    <span>Pages</span>
+                    <span>Shop</span>
+                </nav>
+            </div>
+            <div class="right-header">
+                <span class="bi bi-search"></span>
+                <span class="bi bi-person-fill"></span>
+                <span class="bi bi-heart-fill"></span>
+                <span class="bi bi-cart"></span>
+            </div>
+        </header>
+        <div class="offer">
+            <p>
+                <span class="bi bi-lightning-charge-fill"></span>HAPPY HOLIDAY DEALS ON EVERYTHING
+                <span class="bi bi-lightning-charge-fill"></span>
+            </p>
+        </div>
+        <section>
+            <div class="fashion">
+                <div class="fashion1">
+                    <h2>KIDS</h2>
+                    <p class="top-img-p">
+                        <button>SHOP KIDS</button>
+                        <span class="bi bi-arrow-right"></span>
+                    </p>
+                </div>
+                <div class="fashion2">
+                    <h2>WOMEN</h2>
+                    <p class="top-img-p">
+                        <button>SHOP WOMENS</button>
+                        <span class="bi bi-arrow-right"></span>
+                    </p>
+                </div>
+                <div class="fashion3">
+                    <h2>MENS</h2>
+                    <p class="top-img-p">
+                        <button>SHOP MENS</button>
+                        <span class="bi bi-arrow-right"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="socials">
+                <div class="brand-name">shopper</div>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-youtube"></span>
+            </div>
+            <div>
+                <div class="footer-head">SUPPORT</div>
+                <div>Contact Us</div>
+                <div>FAQs</div>
+                <div>Size Guide</div>
+                <div>Shipping & Returns</div>
+            </div>
+            <div>
+                <div class="footer-head">SHOP</div>
+                <div> Privacy & Cookie policy</div>
+                <div> Privacy & Cookie policy</div>
+                <div> Privacy & Cookie policy</div>
+                <div> Privacy & Cookie policy</div>
+            </div>
+            <div>
+                <div class="footer-head">COMPANY</div>
+                <div>Men's Shopping</div>
+                <div> Women's Shopping</div>
+                <div>Kids' Shopping</div>
+                <div>Discounts</div>
+            </div>
+            <div>
+                <div class="footer-head">CONTACT</div>
+                <div>Our Story</div>
+                <div>Careers</div>
+                <div> Terms & Conditions</div>
+                <div> Privacy & Cookiem policy</div>
+            </div>
+        </footer>
+    </body>
+</html>
